@@ -1,0 +1,160 @@
+<!DOCTYPE  html>
+ 
+<!-- CS 80 Spring 2020 -->
+<!-- Professor Geddes -->
+<!-- Quiz 1-3 Vladimir Palenov -->
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Pastries and cookies recipies</title>
+		<style type = "text/css">
+			h1 {
+				font-family: 'Snell Roundhand';
+			}
+			h2 {
+				font-family: 'Snell Roundhand';
+				text-align: center;
+				font-size: 30px;
+			}
+			h3 {
+				font-family: 'Snell Roundhand';
+			}
+			body {
+  				margin: 0;
+  				background-color: #e4decd;
+			}
+			button {
+				background-color: #acb7ae;
+				border: none;
+  				color: white;
+  				padding: 10px 20px;
+  				text-align: center;
+  				text-decoration: none;
+  				display: inline-block;
+  				font-size: 16px;
+  				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			button[type=submit]:hover {
+				background-color: #4cb69f;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  width: 180px;
+			  background-color: #acb7ae;
+			  position: fixed;
+			  height: 100%;
+			  overflow: auto;
+			  color: #82716e;
+			  font-family: 'Didot';
+			}
+
+			li a {
+			  display: block;
+			  color: #000;
+			  padding: 8px 16px;
+			  text-decoration: none;
+			}
+
+			li a.active {
+			  background-color: #4cb69f;
+			  color: white;
+			}
+
+			li a:hover:not(.active) {
+			  background-color: #555;
+			  color: white;
+			}
+			p {
+				text-indent : 3em;
+				font-family: 'Didot';
+			}
+			#text-form {
+				width: 50%;
+				height: 100px;
+			}
+			.fa {
+			    padding: 20px;
+			    font-size: 30px;
+			    width: 50px;
+			    text-align: center;
+			    text-decoration: none;
+			}
+			.fa:hover {
+  				opacity: 0.7;
+			}
+			.fa-facebook {
+			    background: #3B5998;
+			    color: white;
+			}
+			.fa-twitter {
+  				background: #55ACEE;
+  				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul>
+		  <li><h1>Annie's <br>Pastries & <br>Bakery</h1></li>
+		  <li><a href="homepage.html">Home</a></li>
+		  <li><a href="recepies.html">Recipes</a></li>
+		  <li><a class="active" href="contact.html">Contact</a></li>
+		  <li><a href="about.html">About</a></li>
+		</ul>
+		<!-- Anchor <a> top is here -->		
+		<a name="top"></a>
+		<div style="margin-left:200px;padding:1px 16px;height:1000px;">
+		
+		<h2>If you have any questions, please contact us using the form: </h2>
+		<form
+  			action="https://formspree.io/xgenkroz"
+  			method="POST"
+		>
+  		<label>
+    		Your email:<br>
+    		<input type="text" name="_replyto">
+  		</label>
+  		<br>
+  		<label>
+    		Your name:<br>
+    		<input type="text" name="_sender">
+  		</label>
+  		<br>
+  		<label for="reason">Please choose the reason for contacting us: <br></label>
+  		<select id="reason" name="reason">
+      		<option value="partnership">Partnership</option>
+      		<option value="recepies">Publish recepies</option>
+      		<option value="other">Other</option>
+    	</select>
+    	<br>
+  		<label>
+    		Your message:<br>
+    		<textarea name="message" id="text-form"></textarea>
+  		</label>
+  		<br>
+  		<button type="submit">SEND</button>
+		</form>
+		<br>
+		<h3>We are located in <br>Los Angeles, CA, USA</h3>
+		<br>
+		<h3>Follow us on social media!</h3>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<a href="https://www.facebook.com/vladimir.palenov.1" class="fa fa-facebook"></a>
+		<a href="https://www.twitter.com/vladimirpalenov" class="fa fa-twitter"></a>
+		
+  </form>
+</div>
+		<!-- The link to move to the anchor top is here -->
+		<a href="#top">Back to the top</a>
+		<footer>
+			<p>&copy2020 Vladimir Palenov CS80 Spring 2020</p>
+		</footer>
+	</body>
+</html>
+
+

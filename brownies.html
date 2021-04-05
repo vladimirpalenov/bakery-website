@@ -1,0 +1,141 @@
+<!DOCTYPE  html>
+ 
+<!-- CS 80 Spring 2020 -->
+<!-- Professor Geddes -->
+<!-- Quiz 1-3 Vladimir Palenov -->
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Pastries and cookies recipies</title>
+		<style type = "text/css">
+			h1 {
+				font-family: 'Snell Roundhand';
+				color: #82716e;
+			}
+			img {
+				width: 50%;
+				display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+			}
+			body {
+  				margin: 0;
+  				background-color: #e4decd;
+			}
+			h2 {
+				font-family: 'Snell Roundhand';
+				text-align: center;
+				font-size: 30px;
+			}
+			h3 {
+				font-family: 'Snell Roundhand';
+				text-align: center;
+			}
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  width: 180px;
+			  background-color: #acb7ae;
+			  position: fixed;
+			  height: 100%;
+			  overflow: auto;
+			  font-family: 'Didot';
+			  
+			}
+
+			li a {
+			  display: block;
+			  color: #000;
+			  padding: 8px 16px;
+			  text-decoration: none;
+			}
+
+			li a.active {
+			  background-color: #4cb69f;
+			  color: white;
+			}
+
+			li a:hover:not(.active) {
+			  background-color: #555;
+			  color: white;
+			}
+			p {
+				text-indent : 3em;
+				font-family: 'Didot';
+			}
+			ol {
+				font-family: 'Didot';
+			}
+		</style>
+		<!-- Script -->
+		<script type="text/javascript">
+			//this function calculates amount of ingridients based on the batch of the product
+			function sumUp(){
+				//initializing variables
+		        var quantity, flour, soda, powder, butter, sugar;
+		        //assigning var values to 0 if the value was not entered, assigning to enered value if it's typed in
+		        if (document.getElementById("quantity").value === null){
+		          quantity = 0;
+		        } else{
+		          quantity = +document.getElementById("quantity").value;
+		        }
+		        flour = Math.round(quantity * 0.66 * 100) / 100;
+		        soda = Math.round(quantity * 0.25 * 100) / 100;
+		        powder = Math.round(quantity * 0.15 * 100) / 100;
+		        butter = Math.round(quantity * 0.25 * 100) / 100;
+		        sugar = Math.round(quantity * 0.25 * 100) / 100;
+		        //displaying the amounts
+				document.getElementById("flour").innerHTML = flour + " cup(s)";
+				document.getElementById("soda").innerHTML = soda + " teaspoon(s)";
+				document.getElementById("powder").innerHTML = powder + " teaspoon(s)";
+				document.getElementById("butter").innerHTML = butter + " cup(s)";
+				document.getElementById("sugar").innerHTML = sugar + " tablespoon(s)";
+			}
+		</script>
+	</head>
+
+	<body>
+
+<ul>
+  <li><h1>Annie's <br>Pastries & <br>Bakery</h1></li>
+  <li><a href="homepage.html">Home</a></li>
+  <li><a class="active" href="recepies.html">Recipes</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="margin-left:200px;padding:1px 16px;height:1000px;">
+		<!-- Anchor <a> top is here -->		
+		<a name="top"></a>
+		<h2>Brownies: </h2>
+		<h3>Double chocolate brownies</h3>
+		<img src="brownies.jpg" alt = "Brownies">
+		<p>Directions:</p>
+		<ol>
+			<li>Preheat oven to 375 degrees F (190 degrees C). In a small bowl, stir together flour, baking soda, and baking powder. Set aside.</li>
+			<li>In a large bowl, cream together the butter and sugar until smooth. Beat in egg and vanilla. Gradually blend in the dry ingredients. Roll rounded teaspoonfuls of dough into balls, and place onto ungreased cookie sheets.</li>
+			<li>Bake 8 to 10 minutes in the preheated oven, or until golden. Let stand on cookie sheet two minutes before removing to cool on wire racks.</li>
+		</ol>
+		<br>
+		<p>Serving size - 1 dozen</p>
+		<table>
+			<tr><th>Ingridients</th><th class = "width100px-right-align">Amount</th></tr>
+			<tr><td>Number of servings: </td><td class = "width100px-right-align"><input type="number" id="quantity" name="quantity" value="1" min=0 oninput="sumUp()"></td></tr>
+			<tr><td>Flour</td><td class = "width100px-right-align"><span id = "flour">0.66 cup(s)</span></td></tr>
+			<tr><td>Baking soda</td><td class = "width100px-right-align"><span id = "soda">0.25 teaspoon(s)</span></td></tr>
+			<tr><td>Baking powder</td><td class = "width100px-right-align"><span id = "powder">0.15 teaspoon(s)</span></td></tr>
+			<tr><td>Butter, softened</td><td class = "width100px-right-align"><span id = "butter">0.25 cup(s)</span></td></tr>
+			<tr><td>White sugar</td><td class = "width100px-right-align"><span id = "sugar">0.25 tablespoon(s)</span></td></tr>
+		</table>
+		<br>
+		<!-- The link to move to the anchor top is here -->
+		<a href="#top">Back to the top</a>
+		<footer>
+			<p>&copy2020 Vladimir Palenov CS80 Spring 2020</p>
+		</footer>
+	</body>
+</html>
+
+
